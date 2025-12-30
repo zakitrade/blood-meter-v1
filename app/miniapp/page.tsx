@@ -5,6 +5,7 @@ import sdk from "@farcaster/frame-sdk";
 
 export default function MiniApp() {
   useEffect(() => {
+    // Memberi tahu Farcaster Mini App bahwa app siap
     sdk.actions.ready();
   }, []);
 
@@ -19,13 +20,13 @@ export default function MiniApp() {
       <p>Status: Ready</p>
 
       <button
-        onClick={() => alert("Blood +1 🩸")}
+        onClick={() => alert("Blood Meter +1 🩸")}
         style={{
           padding: 12,
           marginTop: 12,
           borderRadius: 8,
-          background: "#b30000",
-          color: "#fff",
+          background: "red",
+          color: "white",
           border: "none",
         }}
       >
@@ -34,3 +35,4 @@ export default function MiniApp() {
     </main>
   );
 }
+
