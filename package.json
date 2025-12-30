@@ -1,5 +1,5 @@
 {
-  "name": "blood-meter-v1",
+  "name": "blood-meter",
   "private": true,
   "version": "1.0.0",
   "scripts": {
@@ -9,8 +9,7 @@
   },
   "dependencies": {
     "next": "14.2.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   }
 }
-
