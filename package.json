@@ -11,6 +11,8 @@
     "react": "^18",
     "react-dom": "^18",
     "@farcaster/frame-sdk": "^0.0.31"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }
-
