@@ -1,6 +1,5 @@
 {
-  "name": "blood-meter-miniapp",
-  "version": "1.0.0",
+  "name": "blood-meter-v1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,10 +7,14 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "14.1.0",
+    "next": "14.2.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "frames.js": "^0.16.0"
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "@types/node": "^20.11.30",
+    "@types/react": "^18.2.66"
   }
 }
 
