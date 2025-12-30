@@ -1,27 +1,34 @@
 "use client";
 
 import { useEffect } from "react";
-import sdk from "@farcaster/frame-sdk";
 
 export default function MiniApp() {
   useEffect(() => {
-    sdk.actions.ready();
+    // IMPORTANT: Farcaster Mini App ready signal
+    if (typeof window !== "undefined") {
+      // @ts-ignore
+      window.farcaster?.actions?.ready?.();
+    }
   }, []);
 
   return (
-    <main style={{ padding: 24 }}>
+    <main
+      style={{
+        padding: 24,
+        fontFamily: "system-ui, sans-serif",
+      }}
+    >
       <h1>🩸 BLOOD MINI APP</h1>
-      <p>Status: Ready</p>
-
+      <p>Status: App Loaded</p>
       <button
-        onClick={() => alert("Blood Meter +1 🩸")}
+        onClick={() => alert("Blood +1 🩸")}
         style={{
           padding: 12,
-          marginTop: 12,
           borderRadius: 8,
-          background: "red",
-          color: "white",
+          background: "#b30000",
+          color: "#fff",
           border: "none",
+          marginTop: 12,
         }}
       >
         Increase Blood
@@ -29,3 +36,4 @@ export default function MiniApp() {
     </main>
   );
 }
+
