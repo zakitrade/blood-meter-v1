@@ -1,5 +1,5 @@
 
-import { frames } from "frames.js";
+import { frames } from "frames.js/next";
 
 export const runtime = "edge";
 
