@@ -14,6 +14,7 @@ export async function GET() {
     post_url: `${DOMAIN}/api/frame`,
     state: {
       step: "landing",
+      blood: 0,
     },
   });
 }
@@ -21,17 +22,28 @@ export async function GET() {
 export async function POST(req: Request) {
   const body = await req.json();
 
+  const prevBlood =
+    typeof body?.state?.blood === "number" ? body.state.blood : 0;
+
+  const blood = Math.min(prevBlood + 10, 100);
+
   return NextResponse.json({
     image: `${DOMAIN}/og.png`,
     buttons: [
       {
-        label: "🧬 Check Blood Meter",
+        label: `🩸 Blood Level: ${blood}%`,
+        action: "post",
+      },
+      {
+        label: blood >= 100 ? "✅ Join Whitelist" : "⏳ Charging...",
         action: "post",
       },
     ],
     post_url: `${DOMAIN}/api/frame`,
     state: {
       step: "meter",
+      blood,
     },
   });
 }
+
