@@ -1,7 +1,7 @@
 
 import { frames } from "frames.js";
 
-export const runtime = "nodejs";
+export const runtime = "edge";
 
 let globalCount = 0;
 const userCount: Record<number, number> = {};
