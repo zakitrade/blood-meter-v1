@@ -1,0 +1,15 @@
+
+export const metadata = {
+  title: "BLOOD Meter",
+  description: "Donate blood. Feed the system."
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <body style={{ margin: 0, background: "black", color: "white" }}>
+        {children}
+      </body>
+    </html>
+  );
+}
